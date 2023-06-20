@@ -1,0 +1,40 @@
+Penjelasan Topik 5
+
+Divergent Change:
+Dalam topik 5 divergent change kita bisa lihat bahwa dalam Rectangle.java mempunyai banyak sekali function yang sama akan tetapi memiliki 2 jenis output sehingga kita membelah kedua print tersebut menjadi 2 yaitu border dan full rectangle sehingga keduanya mempunyai functionnya sendiri untuk mengoutput yang berbeda. cara kita mengubahnya dalam kasus ini adalah dengan membuat 2 class baru di file yang berbeda dan memasukan function print ke dalam setiap file tersebut.
+
+dalam kasus fullrectangle kita masukan code:
+for(int i = 0; i < height; i++) {
+    for(int j = 0; j < width; j++) {
+     System.out.print("*");
+    }
+    System.out.println("");
+}
+
+dan dalam kasusu borderrectangle kita masukan code:
+for(int i = 0; i < height; i++) {  //print rectangle border
+    for(int j = 0; j < width; j++) {
+     System.out.print(
+       j == 0 || j == width-1 || 
+       i == 0 || i == height-1 ? "*" : " ");
+    }
+    System.out.println("");
+}
+
+untuk kedalam printnya.
+
+dan juga kita menambahkan keduan function tersebut di RectangleTest.java yaitu code:
+
+FullRectanglePrinter fullRectanglePrinter = new FullRectanglePrinter(r);
+fullRectanglePrinter.print();
+BorderRectanglePrinter brd = new BorderRectanglePrinter(r);
+brd.print(); 
+
+sehingga dapat mengprint outputnya
+
+
+
+Paralell inheritance hierarchies:
+Merupakan sebuah smelly code dimana kita memerlukan subclass untuk class lainnya sehingga dapat meningkatkat komplekstias. 
+Dalam topik 5 paralell inherintance kita mengubah shapesnya menjadi extend ke shape2d sehinga dapat mengimput semua width dan height, dan kemudian bisa menghitung berapa area dari shapes tersebut tanpa perlua ada class baru untuk menghitungnya.
+

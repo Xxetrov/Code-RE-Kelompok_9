@@ -1,0 +1,18 @@
+Kevin Jason Daniel - 2501991025
+Alexssandro Nicholson Riandi - 2501984442
+Vincent - 2501992343
+
+Topik Kelompok 1:
+
+Large class:
+Pada code ini terdapat smelly code berjenis large class yaitu, salah satu jenis code smell yang terjadi ketika suatu kelas memiliki terlalu banyak tugas atau tanggung jawab sehingga menyebabkan kelas tersebut sulit dipahami dan tidak fleksibel. Dalam code ini solusinya adalah untuk memecah method setCredit,getCredit,dan hasCredit pada class Customer.java dan membuat class baru yaitu Credit.java. Dengan itu kita bisa memanggil method yang ada di Credit.java menggunakan objek yang ada di Customer.
+
+Primitive Obsession:
+Pada code ini terdapat smelly code berjenis Primitive Obsession yaitu, sebuah jenis code smell yang terjadi ketika ada sebuah program menggunakan primitive data type secara berlebih sehingga code menjadi tidak efektif. Dalam code ini solusinya adalah dengan menghapus variable weapon,weaponType, armor,armorType dan membuat 2 class baru yaitu weapon dan armor. masing-masing dari class tersebut berisi sebuah setter getter serta variabel yang sesuai. Class Character bisa memanggil method dari 2 class tersebut menggunakan objek weapon dan juga armor.
+
+Data clumps:
+Pada code ini terdapat smelly code berjenis Data clumps yaitu, sebuah jenis code smell yang terjadi ketika ada  ketika ada beberapa parameter atau variabel yang sering digunakan secara bersamaan sehingga membuat kode tidak terstruktur rapih. Solusi untuk smelly code ini adalah untuk membuat class baru yaitu RentalPeriod. Kemudian kita akan memindahkan method getStart() dan getEnd() dari class rental dan movie ke class baru tersebut. Dengan itu, kita code akan lebih terorganisir karena class dan rental dapat memanggil method tersebut menggunakan objek. 
+
+Long paramater:
+Pada code ini terdapat smelly code berjenis long param, yaitu sebuah jenis code semll yang terjadi ketika sebuah method atau function mempunyai banyak paramater sehingga membuat kode menjadi ribet dan sulit untuk dipahami. Code juga akan menjadi lebih sulit jika ingin dirubahd atau diperbaiki.Solusinya untuk code ini, kita menggunakan objek User sebagai paramater dari balanceNotif sehingga paramater bisa menjadi lebih sedikit. 
+

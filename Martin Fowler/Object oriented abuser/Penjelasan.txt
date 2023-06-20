@@ -1,0 +1,14 @@
+
+Switch Statement
+Pada code ini terdapat smell code yang berjenis Switch Statement yang terjadi karena switch statement dipakai secara berulang-ulang dan membuat code terlalu panjang, sulit dibaca, atau sulit dimengerti, sehingga menyebabkan code menjadi sulit dimaintenance dan menyulitkan dalam mengidentifikasi dan memperbaiki bug. Solusi untuk menyelesaikan smell code ini adalah dengan merefactor code pada bagian printPilihanOperasi sehingga dapat terhindari dari penggunaan code yang panjang dan kompleks.
+
+Temporary Field
+Pada code ini terdapat smell code yang berjenis Temporary Field yang terjadi karena terdapat sebuah variabel yang hanya digunakan sementara waktu dalam suatu class atau method, kemudian tidak digunakan lagi setelah proses selesai. Kondisi ini dapat menyebabkan code menjadi tidak efisien dan sulit dipelihara karena variabel tersebut mengambil ruang pada memori dan tidak memberikan manfaat apapun pada program. Solusi untuk menyelesaikan smell code ini adalah dengan membuat Class baru yaitu Class Total sehingga variabel hanya perlu dideklarasikan sekali untuk digunakan diberbagai bagian program.
+
+
+Alternative Classes with Different Interface
+Pada code ini terdapat smell code yang berjenis Alternative Classes yang terjadi ketika ada dua kelas yang melakukan fungsi yang sama tetapi dengan nama fungsi atau argumen yang berbeda. Solusi untuk menyelesaikan smell code ini adalah dengan merefactor code tersebut dengan menggabungkan beberapa class yang mirip seperti double price dan string currencyTo menjadi satu kelas yang lebih generik yaitu ke CurrencyConverter, dan menghapus class yang sudah digabungkan.
+
+
+Refused Bequest
+Pada code ini terdapat smell code yang berjenis Refused Bequest yang terjadi ketika sebuah subclass hanya menggunakan sebagian kecil dari fungsi atau metode yang diwarisi dari superclassnya karena subclass mengambil fungsi atau metode dari superclass yang tidak sesuai dengan kebutuhan subclass tersebut. Hal ini dapat menyebabkan masalah seperti duplikasi kode dan ketergantungan yang berlebihan pada hierarki class. Solusi untuk menyelesaikan smell code ini adalah dengan memisahkan superclass menjadi beberapa class yang lebih spesifik seperti private PersonalTaxCalculator personalTaxCalc = new PersonalTaxCalculator()

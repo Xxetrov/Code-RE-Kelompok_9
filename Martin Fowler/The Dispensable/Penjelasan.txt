@@ -1,0 +1,27 @@
+Comment: 
+Merupakan code smell yang mempunyai terlalu banyak comment sehingga membuat code menjadi berantakan. Solusi yang tepat bagi code smell yang diberikan adalah untuk membuat method dan variable menjadi lebih jelas sehingga comment tidak diperlukan lagi. 
+
+Duplicate code: 
+Merupakan code smell yang mempunyai bagian code yang mirip atau sama sehingga membuat code menjadi smelly. Duplicate code membuat code menjadi susah untuk dibaca
+dan meningkatkan adanya bug. Solusi untuk code yang ada adalah untuk untuk mengganti system.out.println menjadi return type sehingga mencegah adanya duplikasi code
+pada setiap method dan mengganti method void menjadi int.  
+
+Lazy class: 
+Merupakan sebuah class yang tidak mempunyai fungsi yang banyak sehingga menyebabkan code smell. 
+Untuk memperbaiki code smell yang diberikan, Dalam Package Company, class workers memiliki code 
+smell Lazy class karena hanya memiliki method2 dasar.
+Sehingga cara untuk memperbaikinya adalah untuk menambah method fungsional seperti salaryTax() Sehingga 
+class dapat lebih berguna
+
+Data Class:
+Merupakan sebuah smelly code dimana class tersebut hanya sebagai setters and getters atau tempat menampung
+data untuk kelas lain. Dari code smell yang diberikan, Maka kita perlu memindahkan kalkulasi distance dalam satu
+method static getDistance dalam class Coordinates dan untuk main class kita hanya perlu menggunakan method. Sehingga
+dalam main class kita hanya perlu memanggil method getDistance. 
+
+Dead Code
+Pada code ini terdapat smell code yang berjenis Dead Code yang terjadi ketika ada code yang tidak pernah dipanggil, fungsi yang tidak pernah digunakan, atau blok code yang tidak berguna. Pada code yang diberikan terdapat terdapat Dead code pada method setPrice() karena constructor Clothes sudah memiliki parameter price sehingga setPrice menjadi code yang tidak berguna. 
+
+Speculative Generality
+Pada code ini terdapat smell code yang berjenis Speculative Generality yang terjadi ketika adanya pengembangan yang berlebihan pada suatu fitur atau fungsionalitas yang mungkin tidak akan digunakan atau diperlukan di masa depan. Solusi untuk menyelesaikan smell code ini adalah dengan merefactor code dengan menghapus atau menyederhanakan fungsionalitas yang tidak diperlukan seperti public static void calculate(double num1, double num2, String operator) if (operator.equals("+")) menjadi public static void add(double num1, double num2)
+

@@ -1,0 +1,15 @@
+
+
+Inappropriate Intimacy
+Pada code ini terdapat smell code yang berjenis Inappropriate Intimacy yang terjadi ketika satu class menggunakan banyak metode atau variabel dari classs lain, atau ketika dua class saling memanggil satu sama lain secara langsung tanpa memperhatikan lapisan abstraksi yang tepat. Solusi untuk menyelesaikan smell code ini adalah dengan menggunakan metode Dependency Injection. Yang berupa pemasukkan objek class lain sebagai parameter constructor sehingga class dapat mengakses fungsionalitas dari classs lain tanpa bergantung langsung pada kelas tersebut. Contohnya dengan memasukkan public String getAddress() dan public String getName() ke class Customer.
+
+Feature Envy
+Pada code ini terdapat smell code yang berjenis Feature Envy yang terjadi ketika sebuah class atau method menggunakan terlalu banyak fitur atau data dari class atau method lain. Soluai untuk menyelesaikan smell code ini adalah merefactor code dengan memindahkan kode yang berkaitan ke class yang tepat atau membuat method baru yang khusus untuk tugas-tugas tersebut seperti pada code public String GetFullAddress(ContactInfo info) yang dipindahkan kedalam class User dari class ContactInfo.
+
+
+Middleman
+Middleman merupakan sebuah smelly code dimana sebuah class hanya berfungsi sebagai perantar yaitu mengerjakan tugas class lain. Jadi dalam topik INI kita menghampus 2 kali pangilan sehingga dari .getWeapon().weapontype(); menjadi .weapontype(); sehingga kita tidak perlu menggunakan kedua funtion tersebut untuk mendapatkan hasil yang sama. cara kita mengimplementasikannya adalah dengan menambahkan class baru di dalam file warrior.java yaitu public void weapontype(){ weapon.weapontype(); }. sehingga dia dapat memangilakan weapontype dari weapon.java.
+
+Incomplete Library Classes 
+Incomplete merupakan code smell dimana sebuah class library memiliki tidak mempunyai metode yang diperlukan. Hal ini dapat mengakibatkan code menjadi lebih ribet karena harus menulis code tambahan sendiri untuk metode yang tidak ada. 
+Dalam topik 10 incomplete menambahkan beberapa code kedalam main sehingga dapat memasukan data dan mengoutput keluar yang diperlukan

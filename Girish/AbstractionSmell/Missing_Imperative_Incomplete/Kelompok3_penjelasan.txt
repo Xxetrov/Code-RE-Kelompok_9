@@ -1,0 +1,10 @@
+Imperative abstraction 
+
+Merupakan code smell yang terjadi jika sebuah class memiliki suatu tugas yang spesifik tanpa memerhatikan tujuannya. Di dalam kasus kelompok 3 terdapat code smell tersebut. Solusinya pertama, menggunakan Interface dalam class baru yang bernama QrImageEncode. Interface tersebut kemudian akan digunakan di class SlashCommandHandler dalam bentuk object. Class lain seperti QrToByteArrayInputStream juga akan mengimplementasi interface tersebut. 
+
+Incomplete abstraction
+Merupakan code smell dimana abstraksi tidak lengkap sehingga mengakibatkan kode menjadi tidak konsisten. Di dalam kelompok 3 terdapat code smell ini dimana QrData memiliki HashMap dan method store yang tidak terabstraksi dengan baik. Dengan itu, solusinya adalah untuk membuat HashMap tersebut menjadi private dan membuat method baru untuk retrieve.
+
+Missing abstraction
+Merupakan code smell dimana ada abstraksi yang hilang dari sebuah konsep atau fungsi sehingga membuat kode menjadi sulit dipahami. Code smell ini terdapat pada sebuah method yang menerima string untuk format file image. Solusinya adalah untuk membuat class baru yaitu QrImageFormat yang didalamnya terdapat format tersebut agar lebih jelas. 
+
